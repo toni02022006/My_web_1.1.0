@@ -1,0 +1,34 @@
+/* src/components/Navbar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Pone el título a la izq y links a la der */
+  align-items: center;
+  padding: 1rem 2rem; /* 1rem (16px) arriba/abajo, 2rem (32px) izq/der */
+  background-color: #1a1a1a; /* Un poco más oscuro que el fondo */
+  border-bottom: 1px solid #444;
+
+  position: sticky; /* IMPORTANTE: Fija el navbar arriba */
+  top: 0;
+  width: calc(100% - 4rem); /* 100% del ancho MENOS el padding (2rem + 2rem) */
+  z-index: 1000;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.menuItems {
+  list-style: none; /* Quita los puntitos de la lista */
+  display: flex;
+  gap: 1.5rem; /* Espacio entre cada link */
+}
+
+.menuItems a {
+  font-size: 1rem;
+}
+
+.menuItems a:hover {
+  color: #61DAFB; /* El azul de React al pasar el mouse */
+}

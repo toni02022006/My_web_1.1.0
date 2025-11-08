@@ -1,11 +1,17 @@
 // src/App.jsx
 
+import Hero from './components/Hero'
+import Navbar from './components/Navbar' // <-- 1. IMPORTA EL NAVBAR
+// import Projects from './components/Projects'
+// import Footer from './components/Footer'
+
 function App() {
   return (
     <div>
-      <h1>¡Hola, soy Anthoni Otiniano!</h1>
-      <p>Este es mi nuevo portafolio y ya está en Internet.</p>
-      <p>¡Este es el primer cambio!</p>
+      <Navbar /> {/* <-- 2. AÑÁDELO AQUÍ (justo arriba del Hero) */}
+      <Hero />
+      {/* <Projects /> */}
+      {/* <Footer /> */}
     </div>
   )
 }

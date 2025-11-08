@@ -1,0 +1,23 @@
+/* src/components/Hero.module.css */
+
+.heroSection {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a; /* Un gris oscuro */
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  color: #61DAFB; /* El azul de React */
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #f5f5f5; /* Un blanco suave */
+  margin-top: 1rem;
+}
