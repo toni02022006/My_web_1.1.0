@@ -2,7 +2,8 @@
 
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
-import Projects from './components/Projects' // <-- 1. IMPORTA PROYECTOS
+import Projects from './components/Projects'
+import AboutMe from './components/AboutMe' // <-- 1. IMPORTA
 // import Footer from './components/Footer'
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <Projects /> {/* <-- 2. AÑÁDELO AQUÍ */}
+      <Projects />
+      <AboutMe /> {/* <-- 2. AÑÁDELO AQUÍ */}
       {/* <Footer /> */}
     </div>
   )
