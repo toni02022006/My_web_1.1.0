@@ -9,6 +9,7 @@ function Navbar() {
 
       <div className={styles.menu}>
         <ul className={styles.menuItems}>
+          <li><a href="#servicios">Servicios</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#sobre-mi">Sobre Mí</a></li>
           <li><a href="#contacto">Contacto</a></li>

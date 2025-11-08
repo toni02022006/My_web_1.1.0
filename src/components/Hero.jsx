@@ -1,13 +1,20 @@
 // src/components/Hero.jsx
-import styles from './Hero.module.css' // <-- 1. Importa los estilos
+import styles from './Hero.module.css' 
 
 function Hero() {
   return (
-    // 2. Usa los estilos como si fueran un objeto
     <section className={styles.heroSection}> 
-      <h1 className={styles.title}>¡Hola, soy Anthoni Otiniano!</h1>
-      <p className={styles.subtitle}>Este es mi nuevo portafolio y ya está en Internet.</p>
-      <p className={styles.subtitle}>¡Este es el primer cambio!</p>
+      {/* Usamos tu nombre directo */}
+      <h1 className={styles.title}>Anthoni Otiniano</h1>
+      
+      {/* Usamos tu título profesional del CV */}
+      <h2 className={styles.jobTitle}>Ingeniero en Software</h2> 
+      
+      {/* Usamos tu tagline profesional del CV */}
+      <p className={styles.subtitle}>
+        Ingeniero en Software dinámico y proactivo, con experiencia en 
+        diversas tecnologías y metodologías de desarrollo.
+      </p>
     </section>
   )
 }

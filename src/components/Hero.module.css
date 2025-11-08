@@ -21,3 +21,10 @@
   color: #f5f5f5; /* Un blanco suave */
   margin-top: 1rem;
 }
+
+.jobTitle {
+  font-size: 2rem; /* Un poco más pequeño que el título */
+  color: #f5f5f5; /* Un blanco suave */
+  margin-top: 0.5rem;
+  font-weight: 400; /* Menos grueso que el nombre */
+}

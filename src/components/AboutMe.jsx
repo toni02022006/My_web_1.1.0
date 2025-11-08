@@ -19,7 +19,21 @@ function AboutMe() {
           Me encanta aprender y estoy constantemente explorando nuevas 
           tecnologías para mejorar mis habilidades.
         </p>
-        
+        <p>
+          Tengo experiencia en desarrollo full-stack, especializándome en 
+          React para el frontend y Python (Django) para el backend. 
+          Me encanta aprender y estoy constantemente explorando nuevas 
+          tecnologías para mejorar mis habilidades.
+        </p>
+
+        {/* --- AÑADE ESTE PÁRRAFO --- */}
+        <p>
+          Adicionalmente, he tenido la oportunidad de ser 
+          <strong> líder y supervisor en más de 15 grupos</strong> de 
+          proyectos, lo que me ha permitido desarrollar fuertes habilidades 
+          de comunicación, gestión de equipos y resolución de problemas.
+        </p>
+
         <h3 className={styles.subtitle}>Mis Habilidades</h3>
         <ul className={styles.skills}>
           <li>React</li>
