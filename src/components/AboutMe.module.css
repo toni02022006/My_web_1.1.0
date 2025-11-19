@@ -49,3 +49,34 @@
   border-radius: 15px; /* Píldoras */
   font-size: 0.9rem;
 }
+
+.experienceItem {
+  text-align: left;
+  margin-bottom: 2rem;
+  border-left: 3px solid #61DAFB; /* Una línea azul elegante a la izquierda */
+  padding-left: 1rem;
+}
+
+.experienceItem h4 {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 0.2rem;
+}
+
+.company {
+  display: block;
+  font-size: 0.9rem;
+  color: #aaa; /* Gris claro */
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.experienceList {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #ddd;
+}
+
+.experienceList li {
+  margin-bottom: 0.5rem;
+}
