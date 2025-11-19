@@ -1,34 +1,59 @@
 /* src/components/Navbar.module.css */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Pone el título a la izq y links a la der */
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem; /* 1rem (16px) arriba/abajo, 2rem (32px) izq/der */
-  background-color: #1a1a1a; /* Un poco más oscuro que el fondo */
-  border-bottom: 1px solid #444;
-
-  position: sticky; /* IMPORTANTE: Fija el navbar arriba */
+  padding: 1rem 2rem;
+  /* USAMOS VARIABLE */
+  background-color: var(--nav-bg); 
+  border-bottom: 1px solid var(--border-color);
+  
+  position: sticky;
   top: 0;
-  width: calc(100% - 4rem); /* 100% del ancho MENOS el padding (2rem + 2rem) */
+  width: calc(100% - 4rem);
   z-index: 1000;
+  transition: background-color 0.3s;
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  /* USAMOS VARIABLE */
+  color: var(--text-color); 
 }
 
 .menuItems {
-  list-style: none; /* Quita los puntitos de la lista */
   display: flex;
-  gap: 1.5rem; /* Espacio entre cada link */
+  gap: 1.5rem;
+  align-items: center; /* Para alinear el botón */
+  padding: 0;
+  margin: 0;
 }
 
 .menuItems a {
   font-size: 1rem;
+  color: var(--text-color); /* USAMOS VARIABLE */
+  transition: color 0.3s;
 }
 
 .menuItems a:hover {
-  color: #61DAFB; /* El azul de React al pasar el mouse */
+  color: var(--accent-color);
+}
+
+/* Estilo del botón de Sol/Luna */
+.themeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.themeBtn:hover {
+  transform: scale(1.2); /* Crece un poquito al pasar el mouse */
+  background-color: rgba(128, 128, 128, 0.1);
 }
