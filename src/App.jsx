@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Services from './components/Services' // <-- 1. IMPORTA
 import Projects from './components/Projects'
 import AboutMe from './components/AboutMe'
+import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Services /> {/* <-- 2. AÑÁDELO AQUÍ */}
       <Projects />
       <AboutMe />
+      <ContactForm />
       <Footer />
     </div>
   )
