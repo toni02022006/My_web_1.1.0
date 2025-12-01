@@ -1,9 +1,9 @@
 // src/data/projects.js
 
 // Importamos las imágenes (puedes seguir usando las mismas por ahora)
-import metricsImage from '../assets/planosperuxd.jpg'; // Usaremos esta para el de Métricas
-import chatbotImage from '../assets/CRM-System.png';   // Usaremos esta para el Chatbot
-import trackingImage from '../assets/placeholder.png'; // Usaremos el placeholder para el tercero
+import metricsImage from '../assets/metrics-system.png'; // Usaremos esta para el de Métricas
+import chatbotImage from '../assets/chatboot-system.png';   // Usaremos esta para el Chatbot
+import trackingImage from '../assets/detctar-inactividad.png'; // Usaremos el placeholder para el tercero
 
 export const projects = [
   {

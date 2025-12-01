@@ -21,15 +21,6 @@ function ProjectCard({ project }) {
           </li>
         ))}
       </ul>
-
-      <div className={styles.links}>
-        <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.link}>
-          GitHub
-        </a>
-        <a href={project.live} target="_blank" rel="noopener noreferrer" className={styles.link}>
-          Demo
-        </a>
-      </div>
     </div>
   );
 }
