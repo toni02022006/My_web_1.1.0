@@ -1,92 +1,64 @@
-// src/components/Services.jsx
+// src/components/AboutUs.jsx
 import React from 'react';
-import styles from './Services.module.css';
-import { FaLaptopCode, FaBrain, FaServer, FaChalkboardTeacher, FaArrowRight, FaRobot, FaChartLine } from 'react-icons/fa';
+import styles from './AboutMe.module.css'; // Asegúrate de que este archivo CSS exista
+import { FaMapMarkerAlt, FaHandshake, FaRocket } from 'react-icons/fa';
 
-function Services() {
-  
-  const servicesData = [
-    {
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
-      icon: <FaLaptopCode />,
-      title: "Desarrollo Web & Apps",
-      description: "Experiencias digitales veloces. Desde Landing Pages que convierten hasta Aplicaciones Web (PWA) escalables.",
-      tags: ["React", "Next.js", "UX/UI"]
-    },
-    {
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      icon: <FaServer />,
-      title: "Sistemas ERP & CRM",
-      description: "Software a medida para automatizar tu empresa. Digitaliza inventarios, ventas y personal en un solo lugar.",
-      tags: ["Python", "Django", "SQL"]
-    },
-    {
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
-      icon: <FaBrain />,
-      title: "Inteligencia Artificial",
-      description: "Implementamos Chatbots inteligentes y modelos predictivos entrenados con los datos reales de tu negocio.",
-      tags: ["Gemini API", "RAG", "LLMs"]
-    },
-    {
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
-      icon: <FaRobot />,
-      title: "Automatización & RPA",
-      description: "Robots de software que hacen el trabajo aburrido por ti. Web Scraping, llenado de formularios y extracción de datos.",
-      tags: ["Selenium", "Scripts", "Python"]
-    },
-    {
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      icon: <FaChartLine />,
-      title: "Analítica & Dashboards",
-      description: "Transformamos datos brutos en tableros visuales para la toma de decisiones estratégicas. Visualiza el futuro.",
-      tags: ["Power BI", "Pandas", "KPIs"]
-    },
-    {
-      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
-      icon: <FaChalkboardTeacher />,
-      title: "Consultoría IT",
-      description: "Capacitación corporativa y mentoría técnica para equipos. Elevamos el nivel de ingeniería de tu personal.",
-      tags: ["Mentoring", "Agile", "Security"]
-    }
-  ];
-
+function AboutUs() {
   return (
-    <section className={styles.container} id="servicios">
+    <section className={styles.container} id="nosotros">
       
-      <div className={styles.header}>
-        <span className={styles.label}>KODIA SOLUTIONS</span>
-        <h2 className={styles.title}>Servicios de Alto Impacto</h2>
-        <p className={styles.subtitle}>
-          Fusionamos ingeniería robusta con diseño estratégico para escalar tu negocio.
+      <div style={{textAlign: 'center', marginBottom: '3rem'}}>
+        <span style={{
+          color: 'var(--accent-color)', 
+          fontWeight: 'bold', 
+          letterSpacing: '2px', 
+          fontSize: '0.9rem'
+        }}>
+          TALENTO LOCAL, ESTÁNDARES GLOBALES
+        </span>
+        <h2 className={styles.title}>Impulsando el Futuro Digital del Perú</h2>
+        <p className={styles.subtitle} style={{maxWidth: '800px', margin: '1rem auto'}}>
+          En <strong>KODIA</strong>, entendemos los desafíos de las empresas peruanas. 
+          No somos una multinacional lejana; somos ingenieros locales comprometidos con la modernización 
+          de nuestro país, brindando tecnología de punta a precios accesibles.
         </p>
       </div>
 
-      <div className={styles.grid}>
-        {servicesData.map((service, index) => (
-          <div key={index} className={styles.card}>
-            <div 
-              className={styles.cardImage} 
-              style={{ backgroundImage: `url(${service.image})` }}
-            ></div>
-            <div className={styles.overlay}></div>
-            <div className={styles.content}>
-              <div className={styles.iconBox}>{service.icon}</div>
-              <h3 className={styles.cardTitle}>{service.title}</h3>
-              <p className={styles.cardDesc}>{service.description}</p>
-              <div className={styles.footer}>
-                <div className={styles.tagsGroup}>
-                  {service.tags.map((tag, i) => (
-                    <span key={i} className={styles.tag}>{tag}</span>
-                  ))}
-                </div>
-                <span className={styles.arrow}><FaArrowRight /></span>
-              </div>
-            </div>
-          </div>
-        ))}
+      <div className={styles.grid} style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+        
+        <div className={styles.column}>
+          <h3 className={styles.columnTitle} style={{color: 'var(--accent-color)'}}>
+            <FaRocket style={{marginRight: '10px'}}/> Nuestra Misión
+          </h3>
+          <p style={{color: 'var(--text-secondary)', lineHeight: '1.6'}}>
+            Hacer que la Inteligencia Artificial y el software a medida sean herramientas accesibles 
+            para la <strong>pequeña y mediana empresa peruana (PYME)</strong>, ayudándolas a competir en igualdad de condiciones.
+          </p>
+        </div>
+        
+        <div className={styles.column}>
+          <h3 className={styles.columnTitle} style={{color: 'var(--accent-color)'}}>
+            <FaMapMarkerAlt style={{marginRight: '10px'}}/> Nuestra Visión
+          </h3>
+          <p style={{color: 'var(--text-secondary)', lineHeight: '1.6'}}>
+            Convertirnos en el socio tecnológico de confianza para los emprendedores del Perú, 
+            siendo reconocidos por nuestra calidad, honestidad y resultados reales.
+          </p>
+        </div>
+
+        <div className={styles.column}>
+          <h3 className={styles.columnTitle} style={{color: 'var(--accent-color)'}}>
+            <FaHandshake style={{marginRight: '10px'}}/> Nuestro Compromiso
+          </h3>
+          <p style={{color: 'var(--text-secondary)', lineHeight: '1.6'}}>
+            Te hablamos claro, sin tecnicismos complicados. Nos involucramos en tu negocio 
+            como si fuera nuestro, garantizando soporte local y soluciones que realmente funcionan.
+          </p>
+        </div>
+
       </div>
     </section>
   );
 }
 
-export default Services;
+export default AboutUs;
