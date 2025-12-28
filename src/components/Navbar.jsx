@@ -1,37 +1,51 @@
 // src/components/Navbar.jsx
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Importamos Link para navegación interna
 import styles from './Navbar.module.css';
-// Importamos íconos de Sol y Luna
-import { FaSun, FaMoon } from 'react-icons/fa'; 
+import { FaSun, FaMoon, FaUserTie } from 'react-icons/fa';
 
 function Navbar() {
-  // Estado para guardar el tema ('dark' o 'light')
+  // Estado para el tema (oscuro por defecto)
   const [theme, setTheme] = useState('dark');
 
-  // Al cargar la página, revisamos si ya había un tema guardado o aplicamos el oscuro
+  // Efecto para aplicar el tema al HTML
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
+  // Función para cambiar entre modos
   const toggleTheme = () => {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
   };
 
   return (
-    // Usamos un estilo en línea para el background dinámico, o actualizaremos el CSS después
     <nav className={styles.navbar}>
-      <a href="/" className={styles.title}>Juan Anthoni</a>
+      {/* LOGO DE LA AGENCIA (Lleva al inicio) */}
+      <Link to="/" className={styles.title}>KODIA</Link>
       
       <div className={styles.menu}>
         <ul className={styles.menuItems}>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#sobre-mi">Sobre Mí</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          {/* MENÚ DE LA AGENCIA (Usamos /# para que funcione desde cualquier página) */}
+          <li><a href="/#servicios">Servicios</a></li>
+          <li><a href="/#proyectos">Proyectos</a></li>
+          <li><a href="/#nosotros">Nosotros</a></li>
+          <li><a href="/#contacto">Contacto</a></li>
           
-          {/* BOTÓN DE CAMBIO DE TEMA */}
+          {/* BOTÓN ESPECIAL: TU CV PROFESIONAL */}
           <li>
-            <button onClick={toggleTheme} className={styles.themeBtn}>
+            <Link to="/perfil" className={styles.profileBtn}>
+              <FaUserTie style={{ marginRight: '8px' }}/> 
+              Mi CV
+            </Link>
+          </li>
+
+          {/* BOTÓN CAMBIO DE TEMA */}
+          <li>
+            <button 
+              onClick={toggleTheme} 
+              className={styles.themeBtn}
+              title="Cambiar tema Claro/Oscuro"
+            >
               {theme === 'dark' ? <FaSun size={20} /> : <FaMoon size={20} />}
             </button>
           </li>
@@ -40,5 +54,5 @@ function Navbar() {
     </nav>
   );
 }
-
+  
 export default Navbar;

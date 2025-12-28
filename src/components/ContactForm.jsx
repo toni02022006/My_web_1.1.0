@@ -22,12 +22,14 @@ function ContactForm() {
 
     // 2. Estructura del mensaje
     const text = `
-Hola Anthoni, vi tu portafolio y me interesa contactarte.
-    
-📌 *Nombre:* ${formData.nombre}
-📧 *Correo:* ${formData.email}
-    
-📝 *Mensaje:* ${formData.mensaje}
+      Hola Anthoni, vi tu portafolio y me interesa contactarte.
+
+      DATOS DE CONTACTO 
+      Nombre: ${formData.nombre}
+      Correo: ${formData.email}
+
+      MENSAJE
+      ${formData.mensaje}
     `;
 
     // 3. Crear la URL de WhatsApp y abrirla

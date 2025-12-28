@@ -57,3 +57,17 @@
   transform: scale(1.2); /* Crece un poquito al pasar el mouse */
   background-color: rgba(128, 128, 128, 0.1);
 }
+.profileBtn {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--accent-color);
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: var(--accent-color) !important; /* Fuerza el color azul */
+  transition: all 0.3s;
+}
+
+.profileBtn:hover {
+  background-color: var(--accent-color);
+  color: white !important; /* Se vuelve sólido al pasar el mouse */
+}

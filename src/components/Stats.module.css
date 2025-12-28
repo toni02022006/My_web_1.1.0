@@ -1,0 +1,28 @@
+.statsContainer {
+  background-color: var(--nav-bg); /* Se adapta a tu tema oscuro/claro */
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.statItem {
+  text-align: center;
+  margin: 10px;
+}
+
+.number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color); /* Tu azul corporativo */
+  margin: 0;
+}
+
+.label {
+  color: var(--text-color);
+  font-weight: 500;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
